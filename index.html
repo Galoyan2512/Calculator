@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="root">
+        <div class="calculator">
+            <div class="result">
+                <label class="toggle-container">
+                    <input type="checkbox" class="toggle-input">
+                    <span class="toggle-slider"></span>
+                  </label>
+                <span class="history"></span>
+                <div>
+                    <span class="equal"> </span>
+                    <span class="mathResult"></span>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="numbers">
+                    <div class="operators">
+                        <button onclick="calculator.deleteCash()">AC</button>
+                        <button onclick="calculator.module()">+/-</button>
+                        <button onclick="calculator.getNumberClick(event.target.textContent)">%</button>
+                    </div>
+                    <div class="numbersDiv">
+                        <div>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">1</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">2</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">3</button>
+                        </div>
+                        <div>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">4</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">5</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">6</button>
+                        </div>
+                        <div>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">7</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">8</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">9</button>
+                        </div>
+                        <div>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">.</button>
+                            <button onclick="calculator.getNumberClick(event.target.textContent)">0</button>
+                            <button onclick="calculator.deleteLastMember()">Del</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="defaultOperators">
+                    <button onclick="calculator.getNumberClick(event.target.textContent)">÷</button>
+                    <button onclick="calculator.getNumberClick(event.target.textContent)">×</button>
+                    <button onclick="calculator.getNumberClick(event.target.textContent)">-</button>
+                    <button onclick="calculator.getNumberClick(event.target.textContent)">+</button>
+                    <button class="equalOperator" onclick="calculator.getResult()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
